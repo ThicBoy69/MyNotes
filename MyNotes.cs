@@ -25,6 +25,13 @@ There are many different types of variables, but the most common ones are 'int',
 An 'int' is a whole number, like 1, 2, 3, 4, 5, 6, 7, 8, 9, 0. 
 A 'string' is a sequence of characters, like ""Hello World"", ""I am a string"", and ""C# is awesome"". 
 A 'float' is a decimal number, like 1.234, 5.678, and 9.101112. 
+A 'double' can countain a decimal number that is double the length of float thus the name double.
 A 'bool' is a true or false value, like true and false. ";
+
+
+public static string VariablesPageThree =
+
+@"...
+[INSERT TEXT]";
 
 }

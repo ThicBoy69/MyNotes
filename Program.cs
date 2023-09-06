@@ -1,33 +1,19 @@
-﻿Book book = new Book("Programming notes");
-List<Chapter> chapters = new List<Chapter>();
+﻿Page FirstPage = new Page(MyNotes.VariablesPageOne);
 
-Chapter variablesChapter = new Chapter("Vars");
-chapters.Add(variablesChapter);
+Page SecondPage = new Page(MyNotes.VariablesPageTwo);
 
-List<Page> variablesPages = new List<Page>();
-Page variablesPage = new Page(MyNotes.VariablesPageOne);
-Page variablesPageTwo = new Page(MyNotes.VariablesPageTwo);
-variablesPages.Add(variablesPage);
-variablesPages.Add(variablesPageTwo);
+Page thiredPage = new Page(MyNotes.VariablesPageThree);
 
-variablesChapter.Pages = variablesPages;
-book.Chapters = chapters;
+Chapter Kapitel1 = new Chapter("variabler");
 
-book.Start();
+Kapitel1.Pages.Add(FirstPage);
+Kapitel1.Pages.Add(SecondPage);
+Kapitel1.Pages.Add(thiredPage);
 
 
 
-// Ved brug af constructor chaining kan vi gøre ovenstående mere læsbart:
-Book book2 = new Book("Programming notes", new List<Chapter>(){
-    new Chapter("Vars", new List<Page>(){
-        new Page(MyNotes.VariablesPageOne),
-        new Page(MyNotes.VariablesPageTwo)
-    }),
-    new Chapter("Unity", new List<Page>(){
-        //new Page(MyNotes.UnityPageOne),
-        //new Page(MyNotes.UnityPageTwo),
-        //new Page(MyNotes.UnityPageThree)
-    })
-});
+Book mybook = new Book("HJAP");
+mybook.Chapters.Add(Kapitel1);
+mybook.Start();
 
-//book2.Start();
+Console.ReadLine();
